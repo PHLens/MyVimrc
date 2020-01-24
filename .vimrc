@@ -112,7 +112,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
-
+nnoremap <C-c> :bd<CR>
 
 "colorscheme snazzy
 "let g:SnazzyTransparent = 1
