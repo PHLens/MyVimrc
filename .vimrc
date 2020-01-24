@@ -1,4 +1,4 @@
-
+let mapleader=' '
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 set mouse=a
 set cursorline
@@ -33,7 +33,11 @@ set formatoptions=tcrqn
 set autoindent 
 set wildmenu
 set number
+
+set scrolloff=5
+
 set wrap
+set tw=0
 
 set relativenumber
 map S :w<CR>
@@ -68,11 +72,11 @@ noremap H 7h
 noremap L 7l
 
 "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%)
-set foldenable
-set foldmethod=syntax
-set foldcolumn=0
-setlocal foldlevel=1
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"set foldenable
+"set foldmethod=syntax
+"set foldcolumn=0
+"setlocal foldlevel=1
+"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 call plug#begin('~/.vim/plugged')
 
@@ -101,6 +105,15 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+"airline
+let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+
+
 "colorscheme snazzy
 "let g:SnazzyTransparent = 1
 
@@ -126,6 +139,3 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 set t_Co=256
 "let g:Powerline_symbols='fancy'
-let g:airline_powerline_fonts = 1
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
