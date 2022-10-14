@@ -15,6 +15,7 @@ map Q :q<CR>
 imap jk <ESC>
 nmap <SPACE> :
 let mapleader=","
+"map R :source %<CR>
 
 " tabs
 nmap tn :tabnew<CR>
@@ -74,6 +75,34 @@ endif
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
+
+" Markdown 
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+
+" If you have nodejs and yarn
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+
+
+" table mode
+Plug 'dhruvasagar/vim-table-mode'
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -165,6 +194,9 @@ set t_Co=256
 syntax on
 set background=dark
 colorscheme onedark
+
+" table mode
+nmap <Leader>tm :TableModeToggle<CR>
 
 " fzf
 nmap <Leader>f :Files<CR>
