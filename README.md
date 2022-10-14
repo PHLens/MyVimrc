@@ -24,7 +24,7 @@ Markdown:
 - [table format](https://vimawesome.com/plugin/table-mode)
 
 模糊搜索：
-- https://vimawesome.com/plugin/fzf
+- [fzf](https://vimawesome.com/plugin/fzf)
 
 Language:
 - [ale](https://vimawesome.com/plugin/ale)
