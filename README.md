@@ -2,6 +2,23 @@
 - for vim, mv init.vim to `~/.vimrc`
 - for neovim, mv init.vim to `~/.config/nvim/init.vim`
 
+## 插件安装
+安装[vim-plug](https://github.com/junegunn/vim-plug)插件
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+在配置文件中加入
+```bash
+call plug#begin()
+Plug '...'
+call plug#end()
+```
+在命令模式下执行
+```vim
+:PlugInstall
+```
+
 ## 插件列表
 文件树：
 - [Nerd Tree](https://vimawesome.com/plugin/nerdtree-red)
