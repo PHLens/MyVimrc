@@ -34,6 +34,9 @@ set ignorecase
 set relativenumber
 set number
 
+" Yank to system clipboard
+set clipboard=unnamed
+
 " Highlight Current Line
 set cursorline
 highlight NERDTreeFile ctermfg=14
