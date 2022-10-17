@@ -1,8 +1,6 @@
 " fast mv 
 nmap J 5j
 nmap K 5k
-nmap H 5h
-nmap L 5l
 " go to the start of the line
 noremap <C-h> 0
 " go to the end of the line
