@@ -50,3 +50,6 @@ Language:
 Docker:
 - [Dockerfile](https://vimawesome.com/plugin/dockerfile-vim)
 - [Docker](https://vimawesome.com/plugin/docker)
+
+代码补全、跳转:
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
