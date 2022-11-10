@@ -41,6 +41,9 @@ set ignorecase
 set relativenumber
 set number
 
+" Undo
+set undolevels=5000
+
 " Yank to system clipboard
 set clipboard=unnamed
 
