@@ -45,7 +45,7 @@ set number
 set undolevels=5000
 
 " Yank to system clipboard
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Highlight Current Line
 set cursorline
