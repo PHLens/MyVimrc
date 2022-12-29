@@ -20,7 +20,7 @@ map S :w<CR>
 map Q :q<CR>
 
 imap jk <ESC>
-nmap <SPACE> :
+"nmap <SPACE> :
 let mapleader=","
 "map R :source %<CR>
 
@@ -174,6 +174,38 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" tagbar
+Plug 'majutsushi/tagbar'
+
+" commenter
+Plug 'preservim/nerdcommenter'
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 
 call plug#end()
 
@@ -378,3 +410,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " ----------------------coc.nvim------------------------
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
