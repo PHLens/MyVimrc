@@ -46,10 +46,16 @@ Markdown:
 Language:
 - [ale](https://vimawesome.com/plugin/ale)
 - [coc-nvim](https://vimawesome.com/plugin/coc-nvim)
+- [nerdcommenter](https://vimawesome.com/plugin/the-nerd-commenter)
 
 Docker:
 - [Dockerfile](https://vimawesome.com/plugin/dockerfile-vim)
 - [Docker](https://vimawesome.com/plugin/docker)
 
-代码补全、跳转:
-- [coc.nvim](https://github.com/neoclide/coc.nvim)
+Tag:
+- [Tagbar](https://vimawesome.com/plugin/tagbar)
+> attention: need to install Ctags, e.g. [Universal Ctags](https://ctags.io/)
+
+tmux
+- [vimux](https://vimawesome.com/plugin/vimux) 在vim中启动新的tmux pane执行shell命令 
+- [vim-tmux-navigator](https://vimawesome.com/plugin/vim-tmux-navigator) switch between vim and tmux

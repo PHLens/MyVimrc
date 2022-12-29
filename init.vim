@@ -30,6 +30,15 @@ nmap tj :tabnext<CR>
 nmap tk :tabprev<CR>
 nmap tc :tabclose<CR>
 
+" Split
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+nnoremap cc <C-w>c
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Indentation
 set tabstop=2
 set expandtab
@@ -43,6 +52,8 @@ set number
 
 " Undo
 set undolevels=5000
+set undofile
+set undodir=~/.config/nvim/undodir
 
 " Yank to system clipboard
 set clipboard^=unnamed,unnamedplus
@@ -206,6 +217,20 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
+
+" vimux
+Plug 'benmills/vimux'
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Zoom the tmux runner pane
+map <leader>vz :VimuxZoomRunner<CR>
+
+" tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
