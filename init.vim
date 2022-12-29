@@ -38,6 +38,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+map <left> :vertical resize-5<CR>
+map <right> :vertical resize+5<CR>
+map <up> :resize-5<CR>
+map <down> :resize+5<CR>
 
 " Indentation
 set tabstop=2
