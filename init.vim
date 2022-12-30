@@ -64,6 +64,7 @@ set clipboard^=unnamed,unnamedplus
 
 " Highlight Current Line
 set cursorline
+set cursorcolumn
 highlight NERDTreeFile ctermfg=14
 
 " Vim can highlight whitespaces for you in a convenient way:
