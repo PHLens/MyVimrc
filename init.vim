@@ -11,9 +11,9 @@ if has("autocmd")
 endif
 
 " go to the start of the line
-noremap <C-h> 0
+noremap H 0
 " go to the end of the line
-noremap <C-l> $
+noremap L $
 
 " save and quit
 map S :w<CR>
@@ -73,6 +73,8 @@ set listchars=tab:>_,trail:.,extends:#,nbsp:.
 
 " Highlight All Search Pattern
 set hlsearch
+" Quickly remove search highlights
+nmap <F9> :nohl
 
 call plug#begin()
 " nerdtree
