@@ -14,7 +14,7 @@
     //  }
     //}
     "clangd": {
-      "command": "/home/lipenghui/clangd_16.0.2/bin/clangd",
+      "command": "clangd",
       "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
       "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
