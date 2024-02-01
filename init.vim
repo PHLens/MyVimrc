@@ -102,7 +102,7 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
-Plug 'altercation/solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
@@ -192,6 +192,8 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Set custom node path
+"let g:coc_node_path = '/home/lipenghui/local/node/bin/node'
 
 " tagbar
 Plug 'majutsushi/tagbar'
@@ -238,6 +240,11 @@ map <leader>vz :VimuxZoomRunner<CR>
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
+
+" cpp highlight
+Plug 'octol/vim-cpp-enhanced-highlight'
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
 
 call plug#end()
 
